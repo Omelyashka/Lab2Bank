@@ -1,0 +1,30 @@
+﻿<Window x:Class="Lab_2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab_2"
+        mc:Ignorable="d"
+        Title="Банківський рахунок" Height="450" Width="800"
+      
+        >
+    <Grid Background="White" Margin="2,15,-2,-15">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="563*"/>
+            <ColumnDefinition Width="237*"/>
+        </Grid.ColumnDefinitions>
+        <Button  Content="Зняти" HorizontalAlignment="Left" Height="41" Margin="52,234,0,0" VerticalAlignment="Top" Width="143" Click="Button_Click_1" Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}" BorderBrush="{x:Null}" RenderTransformOrigin="1.986,0.572" Grid.Column="2" />
+        <Button  Content="Поповнити" HorizontalAlignment="Left" Height="40" Margin="52,288,0,0" VerticalAlignment="Top" Width="144" Click="Button_Click" Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}" BorderBrush="{x:Null}" Grid.Column="2"/>
+        <TextBox x:Name="TBChangeValue"  HorizontalAlignment="Left" Margin="38,172,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="171" Height="45" Background="White" BorderBrush="#FFABADB3" Foreground="#FFF34545" Grid.Column="2"/>
+        <ListBox x:Name="ListBox1" d:ItemsSource="{d:SampleData ItemCount=3}" Margin="10,0,1,10" Background="LightSkyBlue" Height="272" VerticalAlignment="Bottom" Grid.ColumnSpan="2"/>
+        <Label Content="На рахунку:" Margin="38,68,70,301" Grid.Column="2"/>
+        <Button Content="Відкрити рахунок" HorizontalAlignment="Left" Margin="126,69,0,0" VerticalAlignment="Top" Height="42" Width="104" Click="Button_Click_2" BorderBrush="{x:Null}" Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}" Grid.Column="1" />
+        <TextBox x:Name="TB" HorizontalAlignment="Left" Margin="126,22,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="246" Height="42" Background="White" BorderBrush="Black"  Foreground="Black"  Grid.Column="1" CaretBrush="#FF0B0909"/>
+        <Label x:Name="LabelNumber" Content="0" HorizontalAlignment="Left" Margin="171,32,0,0" VerticalAlignment="Top" Height="39" Width="254" FontSize="18" Grid.Column="2"/>
+        <Label x:Name="Labelvalue" Content="0" HorizontalAlignment="Left" Margin="171,64,0,0" VerticalAlignment="Top" Height="39" Width="238" FontSize="18" Grid.Column="2"/>
+        <Label Content="Номер рахунку" Margin="38,32,47,339" Grid.Column="2"/>
+        <Button Content="Створити новий&#xD;&#xA; рахунок" HorizontalAlignment="Left" Margin="269,69,0,0" VerticalAlignment="Top" Height="42" Width="104"  BorderBrush="{x:Null}" Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}" Grid.Column="1" Click="Button_Click_3" />
+
+    </Grid>
+</Window>
